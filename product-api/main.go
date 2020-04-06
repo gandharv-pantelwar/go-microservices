@@ -8,15 +8,15 @@ import (
 	"os/signal"
 	"time"
 
-	"go-microservices/working/handlers"
+	"go-microservices/product-api/handlers"
 )
 
 func main() {
 	l := log.New(os.Stdout, "product-api", log.LstdFlags)
-	hh := handlers.NewHello(l)
+	products := handlers.NewProducts(l)
 
 	sm := http.NewServeMux()
-	sm.Handle("/", hh)
+	sm.Handle("/", products)
 
 	server := &http.Server{
 		Addr:         ":9090",
