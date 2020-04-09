@@ -74,6 +74,11 @@ func (p *Products) MiddlewareProductValidation(next http.Handler) http.Handler {
 			return
 		}
 
+		err = prod.Validate()
+		if err != nil {
+			http.Error(res, "Invalid params", http.StatusBadRequest)
+			return
+		}
 		ctx := context.WithValue(req.Context(), KeyProduct{}, prod)
 		req = req.WithContext(ctx)
 		next.ServeHTTP(res, req)
