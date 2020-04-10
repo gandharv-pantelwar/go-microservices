@@ -11,7 +11,11 @@ import (
 )
 
 // Product ...
+// swagger:model
 type Product struct {
+	// the id for this product
+	// required:true
+	// min:1
 	ID          int     `json:"id"`
 	Name        string  `json:"name" validate:"required"`
 	Description string  `json:"description"`
