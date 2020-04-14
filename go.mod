@@ -10,8 +10,10 @@ require (
 	github.com/go-playground/validator/v10 v10.2.0
 	github.com/gorilla/handlers v1.4.2
 	github.com/gorilla/mux v1.7.4
+	github.com/hashicorp/go-hclog v0.12.2 // indirect
 	github.com/labstack/echo v3.3.10+incompatible // indirect
 	github.com/labstack/gommon v0.3.0 // indirect
+	github.com/nicholasjackson/building-microservices-youtube/product-images v0.0.0-20200329100342-3c14bf3f378d // indirect
 	github.com/valyala/fasttemplate v1.1.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
